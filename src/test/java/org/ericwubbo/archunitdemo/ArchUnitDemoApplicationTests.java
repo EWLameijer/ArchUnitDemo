@@ -8,13 +8,8 @@ import org.springframework.modulith.core.ApplicationModules;
 class ArchUnitDemoApplicationTests {
 
     @Test
-    void contextLoads() {
-    }
-
-    @Test
     void createApplicationModuleModel() {
         ApplicationModules modules = ApplicationModules.of(ArchUnitDemoApplication.class);
         modules.forEach(System.out::println);
     }
-
 }

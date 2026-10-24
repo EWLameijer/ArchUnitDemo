@@ -13,5 +13,4 @@ public class ArchUnitDemoApplication {
                 .getBean(ProductService.class)
                 .create(new Product("baeldung", "course", 10));
     }
-
 }
