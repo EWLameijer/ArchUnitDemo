@@ -1,6 +1,7 @@
 package org.ericwubbo.archunitdemo.notification;
 
 import lombok.extern.slf4j.Slf4j;
+import org.ericwubbo.archunitdemo.notification.internal.Notification;
 import org.springframework.stereotype.Service;
 
 @Slf4j

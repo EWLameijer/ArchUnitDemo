@@ -1,4 +1,4 @@
-package org.ericwubbo.archunitdemo.notification;
+package org.ericwubbo.archunitdemo.notification.internal;
 
 import java.time.LocalDate;
 

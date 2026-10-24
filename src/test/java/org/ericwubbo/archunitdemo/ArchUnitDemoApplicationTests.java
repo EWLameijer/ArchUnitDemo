@@ -12,4 +12,10 @@ class ArchUnitDemoApplicationTests {
         ApplicationModules modules = ApplicationModules.of(ArchUnitDemoApplication.class);
         modules.forEach(System.out::println);
     }
+
+    @Test
+    void verifiesModularStructure() {
+        ApplicationModules modules = ApplicationModules.of(ArchUnitDemoApplication.class);
+        modules.verify();
+    }
 }

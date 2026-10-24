@@ -1,4 +1,4 @@
-package org.ericwubbo.archunitdemo.product;
+package org.ericwubbo.archunitdemo.product.internal;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,7 +1,7 @@
 package org.ericwubbo.archunitdemo;
 
-import org.ericwubbo.archunitdemo.product.Product;
 import org.ericwubbo.archunitdemo.product.ProductService;
+import org.ericwubbo.archunitdemo.product.internal.Product;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
