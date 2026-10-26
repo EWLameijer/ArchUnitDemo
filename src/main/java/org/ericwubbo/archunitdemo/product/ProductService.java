@@ -1,26 +1,20 @@
 package org.ericwubbo.archunitdemo.product;
 
+import lombok.RequiredArgsConstructor;
+import org.ericwubbo.archunitdemo.notification.NotificationDto;
 import org.ericwubbo.archunitdemo.notification.NotificationService;
-import org.ericwubbo.archunitdemo.notification.internal.Notification;
-import org.ericwubbo.archunitdemo.notification.internal.NotificationType;
-import org.ericwubbo.archunitdemo.product.internal.Product;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 
 @Service
+@RequiredArgsConstructor
 public class ProductService {
-
     private final NotificationService notificationService;
     private final ApplicationEventPublisher events;
 
-    public ProductService(ApplicationEventPublisher events, NotificationService notificationService) {
-        this.events = events;
-        this.notificationService = notificationService;
-    }
-
-    public void create(Product product) {
-        notificationService.createNotification(new Notification(LocalDate.now(), NotificationType.SMS, product.getName()));
+    public void create(String productName, String productDescription, int productPrice) {
+        notificationService.createNotification(new NotificationDto(LocalDate.now(), "SMS", productName));
     }
 }
