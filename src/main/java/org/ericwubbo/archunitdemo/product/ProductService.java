@@ -15,6 +15,6 @@ public class ProductService {
     private final ApplicationEventPublisher events;
 
     public void create(String productName, String productDescription, int productPrice) {
-        notificationService.createNotification(new NotificationDto(LocalDate.now(), "SMS", productName));
+        events.publishEvent(new NotificationDto(LocalDate.now(), "SMS", productName));
     }
 }
